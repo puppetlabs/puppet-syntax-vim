@@ -19,7 +19,8 @@ endif
 " match class/definition/node declarations
 syn region  puppetDefine        start="^\s*\(class\|define\|node\)\s" end="{" contains=puppetDefType,puppetDefName,puppetDefArguments,puppetNodeRe
 syn keyword puppetDefType       class define node inherits contained
-syn region  puppetDefArguments  start="(" end=")" contained contains=puppetArgument,puppetString
+syn region  puppetDefArguments  start="(" end=")" contained contains=puppetDefValues,puppetArgument,puppetDefName,puppetComment,puppetMultilineComment
+syn region  puppetDefValues     start="(" end=")" contained contains=puppetArgument,puppetString,puppetDefName,puppetSpecial
 syn match   puppetArgument      "\w\+" contained
 syn match   puppetArgument      "\$\w\+" contained
 syn match   puppetArgument      "'[^']+'" contained

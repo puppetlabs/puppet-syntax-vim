@@ -1,3 +1,7 @@
+THIS PLUGIN IS NO LONGER MAINTAINED!
+
+PLEASE USE @rodjek's PLUGIN FOUND AT https://github.com/rodjek/vim-puppet
+
 To install these files, copy them into ~/.vim, or the relevant
 system-wide location.  To use the ftplugin and indenting, you may need
 to enable them with "filetype plugin indent on" in your vimrc.

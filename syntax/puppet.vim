@@ -68,9 +68,12 @@ syn match   puppetString        "/[^/]*/"
 syn match   puppetNotVariable   "\\$\w\+" contained
 syn match   puppetNotVariable   "\\${\w\+}" contained
 
-syn keyword puppetKeyword       import inherits include
+syn keyword puppetKeyword       inherits include
 syn keyword puppetControl       case default if else elsif
 syn keyword puppetSpecial       true false undef
+
+" warn user of bad/deprecated keywords
+syn keyword puppetKeywordBad    import
 
 " comments last overriding everything else
 syn match   puppetComment       "\s*#.*$" contains=puppetTodo
@@ -91,6 +94,7 @@ if version >= 508 || !exists("did_puppet_syn_inits")
   HiLink puppetVariable             Identifier
   HiLink puppetType                 Identifier
   HiLink puppetKeyword              Define
+  HiLink puppetKeywordBad           Error
   HiLink puppetComment              Comment
   HiLink puppetString               String
   HiLink puppetParamKeyword         String

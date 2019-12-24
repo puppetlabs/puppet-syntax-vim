@@ -4,6 +4,11 @@
 " Last Change:  2009 Aug 19
 " vim: set sw=4 sts=4:
 
+setl ts=2
+setl sts=2
+setl sw=2
+setl et
+
 if exists("b:did_ftplugin")
     finish
 endif
